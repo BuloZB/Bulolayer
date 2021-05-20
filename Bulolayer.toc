@@ -1,0 +1,11 @@
+## Interface: 20501
+## X-Compatible: 11307
+## Title: |cffff306fBuloLayer|r
+## Version: 7
+## Notes: AUTO INVITE FOR LAYER SWAP. /l, /layer
+## DefaultState: enabled
+## Author: Bulo
+## SavedVariablesPerCharacter: Bulolayer
+
+Bulolayer_Options.lua
+Bulolayer.lua
