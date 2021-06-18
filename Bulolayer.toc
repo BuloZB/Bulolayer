@@ -1,7 +1,7 @@
 ## Interface: 20501
 ## X-Compatible: 11307
 ## Title: |cffff306fBuloLayer|r
-## Version: 7
+## Version: 8
 ## Notes: AUTO INVITE FOR LAYER SWAP. /l, /layer
 ## DefaultState: enabled
 ## Author: Bulo
