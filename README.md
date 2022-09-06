@@ -1,3 +1,3 @@
 # Bulolayer
-layer changer addon for TBC classic
+layer changer addon for Wotlk classic
 AUTO INVITE FOR LAYER SWAP. /l, /layer
