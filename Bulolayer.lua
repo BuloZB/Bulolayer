@@ -130,8 +130,8 @@ function HandleInviteRequest(playerName, isWhisper)
         end
     end
 
-    -- Send invite
-    InviteUnit(playerName)
+    -- Send invite (C_PartyInfo for TBC Anniversary)
+    C_PartyInfo.InviteUnit(playerName)
     outgoingInvite = playerName
     Bulolayer:RecordInviteSent()
     Bulolayer:PrintVerbose("Invited " .. playerName .. " for layer swap.", "SUCCESS")
@@ -144,14 +144,14 @@ function HandlePartyInvite(inviterName)
     -- Check restrictions
     if Bulolayer:GetSetting("guildOnly") and not Bulolayer:IsInGuild(inviterName) then
         Bulolayer:PrintVerbose("Declined invite from " .. inviterName .. " (not in guild).", "WARNING")
-        DeclineGroup()
+        C_PartyInfo.DeclineInvite()
         StaticPopup_Hide("PARTY_INVITE")
         return
     end
 
     if Bulolayer:GetSetting("friendsOnly") and not Bulolayer:IsFriend(inviterName) and not Bulolayer:IsInGuild(inviterName) then
         Bulolayer:PrintVerbose("Declined invite from " .. inviterName .. " (not friend/guild).", "WARNING")
-        DeclineGroup()
+        C_PartyInfo.DeclineInvite()
         StaticPopup_Hide("PARTY_INVITE")
         return
     end
@@ -161,7 +161,7 @@ function HandlePartyInvite(inviterName)
     local remaining = Bulolayer:GetBlacklistTime(inviterName)
 
     if remaining and not isFav then
-        DeclineGroup()
+        C_PartyInfo.DeclineInvite()
         StaticPopup_Hide("PARTY_INVITE")
         -- Send cooldown info back
         C_ChatInfo.SendAddonMessage(Bulolayer.ADDON_PREFIX, tostring(math.floor(remaining)), "WHISPER", inviterName)
@@ -170,7 +170,7 @@ function HandlePartyInvite(inviterName)
     end
 
     -- Accept the invite
-    AcceptGroup()
+    C_PartyInfo.AcceptInvite()
     StaticPopup_Hide("PARTY_INVITE")
 
     -- Add to blacklist and record stats

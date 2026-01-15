@@ -386,9 +386,9 @@ function Bulolayer:ExecuteAutoLeave()
         return
     end
 
-    -- Leave party
+    -- Leave party (C_PartyInfo for TBC Anniversary)
     if IsInGroup() then
-        LeaveParty()
+        C_PartyInfo.LeaveParty()
         self:PrintVerbose("Auto-left group after layer swap.", "INFO")
     end
 end
