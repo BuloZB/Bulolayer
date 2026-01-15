@@ -1,6 +1,6 @@
 ## Interface: 20505
 ## Title: |cffff306fBuloLayer|r
-## Version: 2.0
+## Version: 2.0.1
 ## Notes: Advanced layer swap addon. /l or /layer to find group. /layerconfig for options.
 ## DefaultState: enabled
 ## Author: Bulo

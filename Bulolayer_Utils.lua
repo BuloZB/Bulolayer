@@ -5,7 +5,7 @@
 Bulolayer = Bulolayer or {}
 
 -- Version
-Bulolayer.VERSION = "2.0"
+Bulolayer.VERSION = "2.0.1"
 Bulolayer.ADDON_NAME = "Bulolayer"
 Bulolayer.ADDON_PREFIX = "Bulolayer"
 
